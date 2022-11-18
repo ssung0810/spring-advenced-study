@@ -1,6 +1,7 @@
 package hello.advenced.app.v3
 
 import hello.advenced.trace.logtrace.LogTrace
+import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.stereotype.Service
 
 @Service
