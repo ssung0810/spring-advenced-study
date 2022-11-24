@@ -3,9 +3,11 @@ package hello.advenced.trace.logtrace
 import hello.advenced.trace.TraceId
 import hello.advenced.trace.TraceStatus
 import org.slf4j.LoggerFactory
+import org.springframework.context.annotation.Primary
 import org.springframework.stereotype.Component
 
 @Component
+@Primary
 class ThreadLocalLogTrace : LogTrace {
     private val logger = LoggerFactory.getLogger(this::class.java)
 
