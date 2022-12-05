@@ -16,11 +16,9 @@ class OrderControllerV5(
 
     @GetMapping("/v5/request")
     fun request(itemId: String): String {
-        return template.execute("OrderController.request()", object : TraceCallBack<String> {
-            override fun call(): String {
-                orderService.orderItem(itemId)
-                return "ok"
-            }
-        })
+        return template.execute("OrderController.request()") {
+            orderService.orderItem(itemId)
+            "ok"
+        }
     }
 }
